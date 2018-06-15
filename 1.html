@@ -1,0 +1,51 @@
+<html>
+<head>
+ <meta charset = "UTF-8">
+ <title>Palindrome</title>
+ <style type="text/css">
+  body
+  {
+   font:10px sans-serif;
+  }
+ </style>
+ <script type="text/javascript">
+  function palindrome()
+  {
+   var initial = prompt("Please enter a 5 digit string to check whether it is a palindrome:", ""); 
+   var palin = new Array(); 
+   
+   while (initial.length != 5)
+   {
+    alert("You did not enter a 5 character digit! All palindromes that this calculator can solve are 5 digits!")
+    initial = prompt("Please enter a 5 digit string to check whether it is a palindrome:", "");
+   } 
+   for (var i = 0; i <= initial.length -1; i++) { 
+    palin[i] = initial.charAt(i); 
+   };
+   
+   
+   if (palin[0] == palin[4]) 
+   { 
+    if (palin[1] == palin[3])  
+    {
+     document.write("The number that you entered was " + initial + ".");
+     document.write("<br>This number is a palindrome!")
+    }
+   }
+   else 
+   {
+    document.write("The number that you entered was " + initial + ".");
+    document.write("<br>This number is NOT a palindrome!")
+   };
+  }; 
+ </script>
+</head>
+<body align="center" bgcolor="aqua">
+ 
+ <p><h2> Enter a 5 digit string to check whether an the string is a palindrome.</p></h2><br>
+ <p><h2> A palindrome is a number that reads the same backwards and forwards. </h2></p1>
+ <hr> 
+ <input type = "button" id = "palindrome" value = "Click to start the program"  onclick = "palindrome();" />
+</body>
+
+</html>
